@@ -1,0 +1,11 @@
+[build]
+target = "thumbv6m-none-eabi"   # RP2040; switch to thumbv8m.main-none-eabihf for RP2350
+
+[target.thumbv6m-none-eabi]
+runner = "probe-rs run --chip RP2040"
+
+[target.thumbv8m.main-none-eabihf]
+runner = "probe-rs run --chip RP235x"
+
+[env]
+DEFMT_LOG = "info"
